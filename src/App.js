@@ -1,17 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import QuestionsInJs from './QuestionsInJs';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Medley de questions techniques:</p>
-        <p>
-          En <code class='text-yellow-300'>javascript</code>
-        </p>
-        <button className="btn btn-outline btn-warning">Go to algos</button>
-      </header>
+      <Routes>
+        <Route path='/' element={<Home />}/>
+        <Route path='/questionInJs' element={<QuestionsInJs />}/>
+      </Routes>
     </div>
   );
 }
