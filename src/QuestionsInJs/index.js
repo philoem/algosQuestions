@@ -1,6 +1,7 @@
 import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import BackToHome from '../Components/BackToHome';
 
 const QuestionsInJs = () => {
   const codeStringMyArray = 'const myArray = [1,2,3,4,5,6];';
@@ -9,6 +10,7 @@ const QuestionsInJs = () => {
   const codeStringOutput = 'Ouput 6';
   return (
     <div> 
+      <BackToHome />
       <div>
         <summary>Question 1: trouver le chiffre le plus grand dans le tableau</summary>
       </div>
