@@ -8,7 +8,7 @@ const Home = () => {
       <img src={logo} className="App-logo" alt="logo" />
       <p>Medley de questions techniques:</p>
       <p>
-        En <code class='text-yellow-300'>javascript</code>
+        en <code class='text-yellow-300'>javascript</code>
       </p>
       <button className="btn btn-outline btn-warning">
         <Link to="/questionInJs">
