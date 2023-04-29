@@ -1,7 +1,7 @@
 import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import BackToHome from '../Components/BackToHome';
+import BackToHome from '../Components/goBack';
 
 function QuestionsInJs() {
   const codeStringMyArray = 'const myArray = [1,2,3,4,5,6];';

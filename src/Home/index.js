@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import logo from '../logo.svg';
 
 function Home() {
+  const navigate = useNavigate();
   return (
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
@@ -10,8 +11,12 @@ function Home() {
       <p>
         en <code className="text-yellow-300">javascript</code>
       </p>
-      <button type="button" className="btn btn-outline btn-warning">
-        <Link to="/questionInJs">Go to algos</Link>
+      <button
+        type="button"
+        className="btn btn-outline btn-warning"
+        onClick={() => navigate('/questionInJs')}
+      >
+        Go to algos
       </button>
     </header>
   );
