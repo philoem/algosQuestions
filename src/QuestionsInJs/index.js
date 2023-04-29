@@ -1,14 +1,14 @@
-import React from 'react'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
-import BackToHome from '../Components/BackToHome'
+import React from 'react';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import BackToHome from '../Components/BackToHome';
 
-const QuestionsInJs = () => {
-  const codeStringMyArray = 'const myArray = [1,2,3,4,5,6];'
-  const codeStringResultFirst = 'const resultFirst = Math.max(...myArray);'
+function QuestionsInJs() {
+  const codeStringMyArray = 'const myArray = [1,2,3,4,5,6];';
+  const codeStringResultFirst = 'const resultFirst = Math.max(...myArray);';
   const codeStringResultSecond =
-    'const resultSecond = myArray.reduce((x,y) => (x > y) ? x : y);'
-  const codeStringOutput = 'Ouput 6'
+    'const resultSecond = myArray.reduce((x,y) => (x > y) ? x : y);';
+  const codeStringOutput = 'Ouput 6';
   return (
     <div>
       <BackToHome />
@@ -23,11 +23,7 @@ const QuestionsInJs = () => {
       <div>
         <section>
           <h2>1ère solution: utiliser Math</h2>
-          <SyntaxHighlighter
-            language="javascript"
-            style={dracula}
-            wrapLines={true}
-          >
+          <SyntaxHighlighter language="javascript" style={dracula} wrapLines>
             {codeStringResultFirst + codeStringOutput}
             {codeStringOutput}
           </SyntaxHighlighter>
@@ -42,7 +38,7 @@ const QuestionsInJs = () => {
         </section>
       </div>
     </div>
-  )
+  );
 }
 
-export default QuestionsInJs
+export default QuestionsInJs;

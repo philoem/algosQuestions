@@ -1,9 +1,13 @@
 {
-  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
-  "editor.formatOnPaste": false, // required 
-  "editor.formatOnType": false, // required
-  "editor.formatOnSave": false, // optional 
-  "editor.formatOnSaveMode": "file", // required to format on save
-  "files.autoSave": "onFocusChange", // optional but recommended
-  "vs-code-prettier-eslint.prettierLast": true // set as "true" to run 'prettier' last not first
+  "editor.tabSize": 2,
+  "editor.formatOnSave": false,
+  "[javascriptreact]": {
+    "editor.maxTokenizationLineLength": 2500,
+    "editor.formatOnSave": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "docker.languageserver.formatter.ignoreMultilineInstructions": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
 }
