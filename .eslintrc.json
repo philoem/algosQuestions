@@ -22,6 +22,7 @@
         "prettier/prettier": "error",
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "no-console": "off",
-        "react/no-unescaped-entities": 0
+        "react/no-unescaped-entities": 0,
+        "global-require": 0
     }
 }
