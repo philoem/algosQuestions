@@ -2,6 +2,7 @@ import React from 'react';
 import BackToHome from '../Components/goBack';
 import FirstQuestion from './FirstQuestion';
 import SecondQuestion from './SecondQuestion';
+import ThirdQuestion from './ThirdQuestion';
 
 function QuestionsInJs() {
   return (
@@ -11,6 +12,7 @@ function QuestionsInJs() {
       </div>
       <FirstQuestion />
       <SecondQuestion />
+      <ThirdQuestion />
     </div>
   );
 }
