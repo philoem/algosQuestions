@@ -8,34 +8,37 @@ function QuestionsInJs() {
   const codeStringResultFirst = 'const resultFirst = Math.max(...myArray);';
   const codeStringResultSecond =
     'const resultSecond = myArray.reduce((x,y) => (x > y) ? x : y);';
-  const codeStringOutput = 'Ouput 6';
+  // const codeStringOutput = 'Ouput 6';
   return (
-    <div>
-      <BackToHome />
-      <div>
-        <summary>
-          Question 1: trouver le chiffre le plus grand dans le tableau
-        </summary>
+    <div className="w-100">
+      <div className="navbar bg-base-100">
+        <BackToHome />
       </div>
-      <SyntaxHighlighter language="javascript" style={dracula}>
-        {codeStringMyArray}
-      </SyntaxHighlighter>
-      <div>
-        <section>
-          <h2>1ère solution: utiliser Math</h2>
-          <SyntaxHighlighter language="javascript" style={dracula} wrapLines>
-            {codeStringResultFirst + codeStringOutput}
-            {codeStringOutput}
-          </SyntaxHighlighter>
-        </section>
-        <section>
-          <h2>2ème solution: utiliser reduce</h2>
-          <div>
-            <SyntaxHighlighter language="javascript" style={dracula}>
-              {codeStringResultSecond}
-            </SyntaxHighlighter>
+      <div className="grid grid-cols-3 gap-3 place-content-center h-28 px-5 border">
+        <div>
+          <div className="flex items-center">
+            <p>Question 1: trouver le chiffre le plus grand dans le tableau</p>
           </div>
-        </section>
+          <SyntaxHighlighter language="javascript" style={dracula}>
+            {codeStringMyArray}
+          </SyntaxHighlighter>
+        </div>
+        <div>
+          <div className="flex items-center">
+            <p>1ère solution: utiliser Math</p>
+          </div>
+          <SyntaxHighlighter language="javascript" style={dracula}>
+            {codeStringResultFirst}
+          </SyntaxHighlighter>
+        </div>
+        <div>
+          <div className="flex items-center">
+            <p>2ème solution: utiliser reduce</p>
+          </div>
+          <SyntaxHighlighter language="javascript" style={dracula}>
+            {codeStringResultSecond}
+          </SyntaxHighlighter>
+        </div>
       </div>
     </div>
   );

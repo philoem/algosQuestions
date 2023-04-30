@@ -7,7 +7,7 @@ function goBack() {
     navigate(`..`);
   };
   return (
-    <div className="flex ustify-start">
+    <div className="flex justify-start">
       <button
         type="button"
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
