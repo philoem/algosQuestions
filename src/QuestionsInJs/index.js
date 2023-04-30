@@ -3,6 +3,7 @@ import BackToHome from '../Components/goBack';
 import FirstQuestion from './FirstQuestion';
 import SecondQuestion from './SecondQuestion';
 import ThirdQuestion from './ThirdQuestion';
+import FourthQuestion from './FourthQuestion';
 
 function QuestionsInJs() {
   return (
@@ -13,6 +14,7 @@ function QuestionsInJs() {
       <FirstQuestion />
       <SecondQuestion />
       <ThirdQuestion />
+      <FourthQuestion />
     </div>
   );
 }
