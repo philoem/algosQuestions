@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import styles from '../../Styles/Button.module.css'
+import styles from './GoBack.module.css'
 
 function GoBack() {
 	const navigate = useNavigate()

@@ -1,8 +1,8 @@
 import React from 'react'
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
-import Home from './Home'
-import QuestionsInJs from './QuestionsInJs'
+import Home from './Home/Home'
+import QuestionsInJs from './QuestionsInJs/QuestionsInJs'
 
 function App() {
 	return (
