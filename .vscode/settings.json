@@ -1,6 +1,6 @@
 {
   "editor.tabSize": 2,
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "[javascriptreact]": {
     "editor.maxTokenizationLineLength": 2500,
     "editor.formatOnSave": true
@@ -9,5 +9,5 @@
     "source.fixAll": true
   },
   "docker.languageserver.formatter.ignoreMultilineInstructions": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "rome.rome"
 }
