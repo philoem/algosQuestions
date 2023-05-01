@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import logo from '../logo.svg'
-import styles from './Home.module.css'
+import styles from './index.module.css'
 
 function Home() {
 	const navigate = useNavigate()
