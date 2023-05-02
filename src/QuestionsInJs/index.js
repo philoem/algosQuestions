@@ -4,6 +4,7 @@ import FirstQuestion from './FirstQuestion'
 import SecondQuestion from './SecondQuestion'
 import ThirdQuestion from './ThirdQuestion'
 import FourthQuestion from './FourthQuestion'
+import FifthQuestion from './FifthQuestion'
 
 function QuestionsInJs() {
 	return (
@@ -15,6 +16,7 @@ function QuestionsInJs() {
 			<SecondQuestion />
 			<ThirdQuestion />
 			<FourthQuestion />
+			<FifthQuestion />
 		</div>
 	)
 }
