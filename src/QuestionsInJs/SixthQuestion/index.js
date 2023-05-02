@@ -4,7 +4,8 @@ import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import styles from './index.module.css'
 
 function SixthQuestion() {
-	const checkSpace = 'const iseEqualTo100 = (a, b) => a ===100 || b === 100 || (a+b) === 100;'
+	const checkExtension =
+		'const getFileExtension = (string) => string.slice(string.lastIndexOf("."))\nconsole.log(getFileExtension("index.html"));\n//output: .html'
 	return (
 		<div className={styles.container}>
 			<div className={styles.firstSubContainer}>
@@ -17,7 +18,7 @@ function SixthQuestion() {
 					<p>Solution:</p>
 				</div>
 				<SyntaxHighlighter language="javascript" style={dracula}>
-					{checkSpace}
+					{checkExtension}
 				</SyntaxHighlighter>
 			</div>
 		</div>
