@@ -1,6 +1,7 @@
 import React from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import styles from './index.module.css'
 
 function ThirdQuestion() {
 	const checkBool = `function checkArguments(x, y) {
@@ -11,14 +12,14 @@ function ThirdQuestion() {
     }
   }`
 	return (
-		<div className="grid grid-cols-3 gap-3 place-content-center h-full px-5 border mb-4">
-			<div className="flex items-center">
+		<div className={styles.container}>
+			<div className={styles.firstSubContainer}>
 				<p>
 					<strong>Question 3:</strong> Retournez un booléen à l'appel d'une fonction
 				</p>
 			</div>
 			<div>
-				<div className="flex items-center">
+				<div className={styles.secondSubContainer}>
 					<p>Solution:</p>
 				</div>
 				<SyntaxHighlighter language="javascript" style={dracula}>

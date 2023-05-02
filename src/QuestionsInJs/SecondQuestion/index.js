@@ -1,6 +1,7 @@
 import React from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import styles from './index.module.css'
 
 function SecondQuestion() {
 	const words = `const word1 = 'Chien'; \nconst word1 = 'Niche';`
@@ -10,9 +11,9 @@ function SecondQuestion() {
   }
   checkAnagram('Chien', 'Niche'); // output: true`
 	return (
-		<div className="grid grid-cols-3 gap-3 place-content-center h-full px-5 border mb-4">
+		<div className={styles.container}>
 			<div>
-				<div className="flex items-center">
+				<div className={styles.firstSubContainer}>
 					<p>
 						<strong>Question 2:</strong> comparer 2 mots pour voir si l'un est l'anagramme de
 						l'autre
@@ -23,7 +24,7 @@ function SecondQuestion() {
 				</SyntaxHighlighter>
 			</div>
 			<div>
-				<div className="flex items-center">
+				<div className={styles.secondSubContainer}>
 					<p>Solution:</p>
 				</div>
 				<SyntaxHighlighter language="javascript" style={dracula}>
@@ -31,7 +32,7 @@ function SecondQuestion() {
 				</SyntaxHighlighter>
 			</div>
 			<div>
-				<div className="flex items-center">
+				<div className={styles.thirdSubContainer}>
 					<p>Résultat:</p>
 				</div>
 				<SyntaxHighlighter language="javascript" style={dracula}>

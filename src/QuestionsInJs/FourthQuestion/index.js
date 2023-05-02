@@ -1,15 +1,16 @@
 import React from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import styles from './index.module.css'
 
 function FourthQuestion() {
 	const checkSpace = `const myText = 'Too much   space';`
 	const resultSpace = `myText.replace(/ {1,}/g, "");
   myText.trim();`
 	return (
-		<div className="grid grid-cols-3 gap-3 place-content-center h-full px-5 border mb-4">
+		<div className={styles.container}>
 			<div>
-				<div className="flex items-center">
+				<div className={styles.firstSubContainer}>
 					<p>
 						<strong>Question 4:</strong> Comment supprimer les espaces en trop dans une string
 					</p>
@@ -19,7 +20,7 @@ function FourthQuestion() {
 				</SyntaxHighlighter>
 			</div>
 			<div>
-				<div className="flex items-center">
+				<div className={styles.secondSubContainer}>
 					<p>Solution:</p>
 				</div>
 				<SyntaxHighlighter language="javascript" style={dracula}>

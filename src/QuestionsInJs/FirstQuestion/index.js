@@ -1,6 +1,7 @@
 import React from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import styles from './index.module.css'
 
 function FirstQuestion() {
 	const codeStringMyArray = 'const myArray = [1,2,3,4,5,6];'
@@ -9,9 +10,9 @@ function FirstQuestion() {
 	const codeStringResultSecond =
 		'const resultSecond = myArray.reduce((x,y) => (x > y) ? x : y);\nconsole.log(resultFirst); // output: 6'
 	return (
-		<div className="grid grid-cols-3 gap-3 place-content-center h-full px-5 border mb-4">
+		<div className={styles.container}>
 			<div>
-				<div className="flex items-center">
+				<div>
 					<p>
 						<strong>Question 1:</strong> trouver le chiffre le plus grand dans le tableau
 					</p>
@@ -21,7 +22,7 @@ function FirstQuestion() {
 				</SyntaxHighlighter>
 			</div>
 			<div>
-				<div className="flex items-center">
+				<div className={styles.firstSubContainer}>
 					<p>1ère solution: utiliser Math</p>
 				</div>
 				<SyntaxHighlighter language="javascript" style={dracula}>
@@ -29,7 +30,7 @@ function FirstQuestion() {
 				</SyntaxHighlighter>
 			</div>
 			<div>
-				<div className="flex items-center">
+				<div className={styles.secondSubContainer}>
 					<p>2ème solution: utiliser reduce</p>
 				</div>
 				<SyntaxHighlighter language="javascript" style={dracula}>
