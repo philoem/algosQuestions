@@ -6,6 +6,7 @@ import ThirdQuestion from './ThirdQuestion'
 import FourthQuestion from './FourthQuestion'
 import FifthQuestion from './FifthQuestion'
 import SixthQuestion from './SixthQuestion'
+import ScrollToTop from '../Components/ScrollToTop'
 
 function QuestionsInJs() {
 	return (
@@ -19,6 +20,7 @@ function QuestionsInJs() {
 			<FourthQuestion />
 			<FifthQuestion />
 			<SixthQuestion />
+			<ScrollToTop />
 		</div>
 	)
 }
