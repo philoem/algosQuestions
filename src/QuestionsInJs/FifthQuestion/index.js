@@ -1,7 +1,7 @@
 import React from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
-import styles from './index.module.css'
+import styles from '../styles/questionsInJs.module.css'
 
 function FifthQuestion() {
 	const checkSpace = 'const iseEqualTo100 = (a, b) => a ===100 || b === 100 || (a+b) === 100;'

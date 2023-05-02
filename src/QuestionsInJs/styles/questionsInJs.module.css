@@ -7,10 +7,11 @@
   padding-left: 1.25rem; /* 20px */
   padding-right: 1.25rem; /* 20px */
   margin-bottom: 1rem; /* 16px */
+  border: 1px solid lightgrey;
   border-radius: 8px;
 }
 
-.firstSubContainer, .secondSubContainer {
+.firstSubContainer, .secondSubContainer, .thirdSubContainer {
   display: flex;
   align-items: center;
 }

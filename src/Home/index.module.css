@@ -18,3 +18,9 @@
 .textCode {
   color: rgb(253 224 71);
 }
+
+.textHome {
+  box-sizing: border-box;
+  padding: 0;
+  height: 150px;
+}

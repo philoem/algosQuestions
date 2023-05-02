@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+}
+
+.containerBtnBack {
+  display: flex;
+  align-items: middle;
+  justify-content: flex-start;
+  padding: 5px;
+}

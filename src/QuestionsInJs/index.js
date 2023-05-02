@@ -7,11 +7,12 @@ import FourthQuestion from './FourthQuestion'
 import FifthQuestion from './FifthQuestion'
 import SixthQuestion from './SixthQuestion'
 import ScrollToTop from '../Components/ScrollToTop'
+import styles from './index.module.css'
 
 function QuestionsInJs() {
 	return (
-		<div className="w-100">
-			<div className="navbar bg-base-100">
+		<div className={styles.container}>
+			<div className={styles.containerBtnBack}>
 				<BackToHome />
 			</div>
 			<FirstQuestion />
