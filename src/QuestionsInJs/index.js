@@ -1,4 +1,3 @@
-import React from 'react'
 import GoBack from '../Components/GoBack'
 import FirstQuestion from './FirstQuestion'
 import SecondQuestion from './SecondQuestion'
