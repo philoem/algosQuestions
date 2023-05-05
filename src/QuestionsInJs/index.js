@@ -1,5 +1,5 @@
 import React from 'react'
-import BackToHome from '../Components/goBack'
+import GoBack from '../Components/GoBack'
 import FirstQuestion from './FirstQuestion'
 import SecondQuestion from './SecondQuestion'
 import ThirdQuestion from './ThirdQuestion'
@@ -13,7 +13,7 @@ function QuestionsInJs() {
 	return (
 		<div className={styles.container}>
 			<div className={styles.containerBtnBack}>
-				<BackToHome />
+				<GoBack />
 			</div>
 			<FirstQuestion />
 			<SecondQuestion />
