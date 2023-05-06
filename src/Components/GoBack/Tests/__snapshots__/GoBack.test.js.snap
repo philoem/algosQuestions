@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GoBack Button GoBack button is displayed 1`] = `
+<div>
+  <div
+    class="containerBtnGoBack"
+  >
+    <button
+      class="btnGoBack"
+      type="button"
+    >
+      Back to home
+    </button>
+  </div>
+</div>
+`;
