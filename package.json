@@ -17,21 +17,16 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
-		"test": "jest --watchAll --config jest.config.js",
+		"test": "jest --watchAll --config ./configs/jest/jest.config.js",
 		"eject": "react-scripts eject",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build"
 	},
 	"eslintConfig": {
-		"extends": [
-			"react-app",
-			"react-app/jest"
-		],
+		"extends": ["react-app", "react-app/jest"],
 		"overrides": [
 			{
-				"files": [
-					"**/*.stories.*"
-				],
+				"files": ["**/*.stories.*"],
 				"rules": {
 					"import/no-anonymous-default-export": "off"
 				}
@@ -39,16 +34,8 @@
 		]
 	},
 	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
+		"production": [">0.2%", "not dead", "not op_mini all"],
+		"development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
 	},
 	"devDependencies": {
 		"@babel/core": "^7.21.8",
