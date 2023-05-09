@@ -14,6 +14,7 @@ Once time you are on question's page you will find some questions with theirs so
 - **Jest** for tests with Gherkin language
 - **rome** v12.0.0 to lint & format because all paths lead to Rome
 - **pnpm** to lighten the most object of the universe 
+- **react-syntax-highlighter** to write js code in markdown
 
 
 ****
