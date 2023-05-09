@@ -1,4 +1,24 @@
-# Getting Started with Create React App
+# Project Medley Algos
+It's a Javascript algorithms training site.
+
+## Overview
+![screenshot](/src/assets/Capture%20d%E2%80%99%C3%A9cran%20du%202023-05-09%2016-07-36.png)
+
+
+## How does it work ?
+Once time you are on question's page you will find some questions with theirs solutions. You could reveal solution with a button.
+
+## technos used
+- React v18.2.0
+- Storybook
+- Jest for tests with Gherkin language
+- rome v12.0.0 to lint & format
+- pnpm
+
+
+****
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
