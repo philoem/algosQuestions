@@ -11,7 +11,7 @@ function FirstQuestion() {
 	return (
 		<div className={styles.container}>
 			<div>
-				<div>
+				<div className={styles.firstSubContainer}>
 					<p>
 						<strong>Question 1:</strong> trouver le chiffre le plus grand dans le tableau
 					</p>
