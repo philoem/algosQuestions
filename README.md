@@ -8,12 +8,12 @@ It's a Javascript algorithms training site.
 ## How does it work ?
 Once time you are on question's page you will find some questions with theirs solutions. You could reveal solution with a button.
 
-## technos used
-- React v18.2.0
-- Storybook
-- Jest for tests with Gherkin language
-- rome v12.0.0 to lint & format
-- pnpm
+## Technos used
+- **React** v18.2.0
+- **Storybook**
+- **Jest** for tests with Gherkin language
+- **rome** v12.0.0 to lint & format because all paths lead to Rome
+- **pnpm** to lighten the most object of the universe 
 
 
 ****
