@@ -1,8 +1,13 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import styles from '../styles/questionsInJs.module.css'
+import SwitchButton from '../../Components/SwitchButton'
+import useRevealSolution from '../hooks/useRevealSolution'
 
 function SecondQuestion() {
+	const { isVisibleFirst, isVisibleSecond, toggleButtonFirst, toggleButtonSecond } =
+		useRevealSolution()
+
 	const words = `const word1 = 'Chien'; \nconst word1 = 'Niche';`
 	const wordsRegexed = `word1.toLowerCase().split('').sort(); \nconsole.log(word1) // output: ["c", "e", "h", "i", "n"] \nword2.toLowerCase().split('').sort(); \nconsole.log(word2) // output: ["c", "e", "h", "i", "n"]`
 	const result = `function checkAnagram(string1, string2) {
@@ -25,18 +30,24 @@ function SecondQuestion() {
 			<div>
 				<div className={styles.secondSubContainer}>
 					<p>Solution:</p>
+					<SwitchButton onClick={toggleButtonFirst} isVisibleFirst={isVisibleFirst} />
 				</div>
-				<SyntaxHighlighter language="javascript" style={dracula}>
-					{wordsRegexed}
-				</SyntaxHighlighter>
+				{isVisibleFirst && (
+					<SyntaxHighlighter language="javascript" style={dracula}>
+						{wordsRegexed}
+					</SyntaxHighlighter>
+				)}
 			</div>
 			<div>
 				<div className={styles.thirdSubContainer}>
 					<p>Résultat:</p>
+					<SwitchButton onClick={toggleButtonSecond} isVisibleSecond={isVisibleSecond} />
 				</div>
-				<SyntaxHighlighter language="javascript" style={dracula}>
-					{result}
-				</SyntaxHighlighter>
+				{isVisibleSecond && (
+					<SyntaxHighlighter language="javascript" style={dracula}>
+						{result}
+					</SyntaxHighlighter>
+				)}
 			</div>
 		</div>
 	)
