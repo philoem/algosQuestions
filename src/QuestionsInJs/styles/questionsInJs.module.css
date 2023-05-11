@@ -15,3 +15,10 @@
   display: flex;
   align-items: center;
 }
+
+.labelText{
+  margin-bottom: 12px;
+  font-weight: 300;
+  font-size: medium;
+  padding-left: 3px;
+}

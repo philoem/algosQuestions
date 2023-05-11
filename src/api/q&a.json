@@ -1,0 +1,44 @@
+[
+	{
+		"id": 0,
+		"topic": "Trouver le chiffre le plus grand dans le tableau",
+		"statement": "const myArray = [1,2,3,4,5,6];",
+		"result1": "Utiliser Math:\nconst resultFirst = Math.max(...myArray);\nconsole.log(resultFirst); // output: 6",
+		"result2": "Utiliser reduce:\nconst resultSecond = myArray.reduce((x,y) => (x > y) ? x : y);\nconsole.log(resultFirst); // output: 6"
+	},
+	{
+		"id": 1,
+		"topic": "Comparer 2 mots pour voir si l'un est l'anagramme de l'autre",
+		"statement": "const word1 = 'Chien'; \nconst word1 = 'Niche';",
+		"result1": "word1.toLowerCase().split('').sort(); \nconsole.log(word1) // output: ['c', 'e', 'h', 'i', 'n'] \nword2.toLowerCase().split('').sort(); \nconsole.log(word2) // output: ['c', 'e', 'h', 'i', 'n'",
+		"result2": "function checkAnagram(string1, string2) {\nreturn string1.toLowerCase().split('').sort() === string2.toLowerCase().split('').sort();\n}\ncheckAnagram('Chien', 'Niche'); // output: true"
+	},
+	{
+		"id": 2,
+		"topic": "Retournez un booléen à l'appel d'une fonction",
+		"statement": null,
+		"result1": "function checkArguments(x, y) {\nif (x === 1 || y === 1 || (x+y === 1)) {\nreturn true;\n} else {\nreturn false;\n}\n}",
+		"result2": null
+	},
+	{
+		"id": 3,
+		"topic": "Comment supprimer les espaces en trop dans une string",
+		"statement": "const myText = 'Too much   space';",
+		"result1": "myText.replace(/ {1,}/g, '');\nmyText.trim();",
+		"result2": null
+	},
+	{
+		"id": 4,
+		"topic": "Comparer 2 nombres et retourner true si un des 2 nombres est égal à 100 ou si la somme des 2 nombres est égale à 100",
+		"statement": null,
+		"result1": "const iseEqualTo100 = (a, b) => a ===100 || b === 100 || (a+b) === 100;",
+		"result2": null
+	},
+	{
+		"id": 5,
+		"topic": "Récupérer l'extension d'un nom de fichier",
+		"statement": null,
+		"result1": "const getFileExtension = (string) => string.slice(string.lastIndexOf('.''))\nconsole.log(getFileExtension('index.html'));\n//output: .html",
+		"result2": null
+	}
+]

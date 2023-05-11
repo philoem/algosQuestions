@@ -1,14 +1,25 @@
 import { useState, useCallback } from 'react'
 
 const useRevealSolution = () => {
-	const [isVisibleFirst, setIsVisibleFirst] = useState(false)
-	const [isVisibleSecond, setIsVisibleSecond] = useState(false)
-	const toggleButtonFirst = useCallback(() => {
-		setIsVisibleFirst((isVisibleFirst) => !isVisibleFirst)
-	}, [])
-	const toggleButtonSecond = useCallback(() => {
-		setIsVisibleSecond((isVisibleSecond) => !isVisibleSecond)
-	}, [])
+	const [isVisibleFirst, setIsVisibleFirst] = useState([])
+	const [isVisibleSecond, setIsVisibleSecond] = useState([])
+
+	const toggleButtonFirst = useCallback(
+		(index) => {
+			const newButtons = [...isVisibleFirst]
+			newButtons[index] = !newButtons[index]
+			setIsVisibleFirst(newButtons)
+		},
+		[isVisibleFirst]
+	)
+	const toggleButtonSecond = useCallback(
+		(index) => {
+			const newButtons = [...isVisibleSecond]
+			newButtons[index] = !newButtons[index]
+			setIsVisibleSecond(newButtons)
+		},
+		[isVisibleSecond]
+	)
 
 	return {
 		isVisibleFirst,

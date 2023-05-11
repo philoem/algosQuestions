@@ -7,13 +7,6 @@
   padding-left: 10px;
 }
 
-.labelText{
-  margin-bottom: -5px;
-  font-weight: 300;
-  font-size: medium;
-  padding-left: 3px;
-}
-
 .switch input
 {
   display: none;
