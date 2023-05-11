@@ -19,9 +19,11 @@ function ListOfQuestions() {
 									<strong>Question {index + 1}:</strong> {topic}
 								</p>
 							</div>
-							<SyntaxHighlighter language="javascript" style={dracula}>
-								{statement}
-							</SyntaxHighlighter>
+							{statement && (
+								<SyntaxHighlighter language="javascript" style={dracula}>
+									{statement}
+								</SyntaxHighlighter>
+							)}
 						</div>
 						<div>
 							<div className={styles.firstSubContainer}>
@@ -38,14 +40,16 @@ function ListOfQuestions() {
 							)}
 						</div>
 						<div>
-							<div className={styles.secondSubContainer}>
-								<p>2ème solution:</p>
-								<SwitchButton onClick={() => toggleButtonSecond(id)} key={`swicthSecond_${id}`} />
-								<p className={styles.labelText}>
-									{isVisibleSecond[id] === true ? 'Hide' : 'Reveals'}
-								</p>
-							</div>
-							{isVisibleSecond[id] && (
+							{result2 && (
+								<div className={styles.secondSubContainer}>
+									<p>2ème solution:</p>
+									<SwitchButton onClick={() => toggleButtonSecond(id)} key={`swicthSecond_${id}`} />
+									<p className={styles.labelText}>
+										{isVisibleSecond[id] === true ? 'Hide' : 'Reveals'}
+									</p>
+								</div>
+							)}
+							{isVisibleSecond[id] && result2 && (
 								<SyntaxHighlighter language="javascript" style={dracula}>
 									{result2}
 								</SyntaxHighlighter>
@@ -54,39 +58,6 @@ function ListOfQuestions() {
 					</>
 				)
 			})}
-
-			{/* <div>
-				<div className={styles.firstSubContainer}>
-					<p>
-						<strong>Question 1:</strong> trouver le chiffre le plus grand dans le tableau
-					</p>
-				</div>
-				<SyntaxHighlighter language="javascript" style={dracula}>
-					{codeStringMyArray}
-				</SyntaxHighlighter>
-			</div>
-			<div>
-				<div className={styles.firstSubContainer}>
-					<p>1ère solution: </p>
-					<SwitchButton onClick={toggleButtonFirst} isVisibleFirst={isVisibleFirst} />
-				</div>
-				{isVisibleFirst && (
-					<SyntaxHighlighter language="javascript" style={dracula}>
-						{codeStringResultFirst}
-					</SyntaxHighlighter>
-				)}
-			</div>
-			<div>
-				<div className={styles.secondSubContainer}>
-					<p>2ème solution:</p>
-					<SwitchButton onClick={toggleButtonSecond} isVisibleSecond={isVisibleSecond} />
-				</div>
-				{isVisibleSecond && (
-					<SyntaxHighlighter language="javascript" style={dracula}>
-						{codeStringResultSecond}
-					</SyntaxHighlighter>
-				)}
-			</div> */}
 		</div>
 	)
 }
