@@ -18,7 +18,7 @@
   width: 60px; /*=w*/
   height: 20px; /*=h*/
   margin: 4px;
-  transform: translateY(50%);
+  transform: translateY(140%);
   position: relative;
 }
 

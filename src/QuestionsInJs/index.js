@@ -1,7 +1,7 @@
 import GoBack from '../Components/GoBack'
-import ListOfQuestions from './ListOfQuestions'
 import ScrollToTop from '../Components/ScrollToTop'
 import styles from './index.module.css'
+import CardsQuestions from './CardsQuestions'
 
 function QuestionsInJs() {
 	return (
@@ -9,7 +9,7 @@ function QuestionsInJs() {
 			<div className={styles.containerBtnBack}>
 				<GoBack />
 			</div>
-			<ListOfQuestions />
+			<CardsQuestions />
 			<ScrollToTop />
 		</div>
 	)
