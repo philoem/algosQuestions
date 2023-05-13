@@ -78,13 +78,11 @@ body {
 
 .progress::after {
 	border-radius: 3px;
-	background-color: #2A265F;
 	content: '';
 	position: absolute;
 	top: 0;
 	left: 0;
 	height: 5px;
-	width: 66%;
 }
 
 .progressText {

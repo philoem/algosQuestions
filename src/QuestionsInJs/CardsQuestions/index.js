@@ -4,10 +4,12 @@ import question from '../../api/q&a.json'
 import useRevealSolution from '../hooks/useRevealSolution'
 import SwitchButton from '../../Components/SwitchButton'
 import styles from './index.module.css'
+import progressBar from '../../utils/progressBar'
 
 const CardsQuestions = () => {
 	const { isVisibleFirst, isVisibleSecond, toggleButtonFirst, toggleButtonSecond } =
 		useRevealSolution()
+	const questionLength = question?.length
 	return (
 		<div>
 			{question?.map(({ id, topic, statement, result1, result2 }, index) => {
@@ -21,8 +23,16 @@ const CardsQuestions = () => {
 								</div>
 								<div className={styles.courseInfo}>
 									<div className={styles.progressContainer}>
-										<div className={styles.progress} />
-										<span className={styles.progressText}>{index + 1}/9 Challenges</span>
+										<div
+											className={styles.progress}
+											style={{
+												width: `${progressBar({ questionLength, index })}%`,
+												backgroundColor: '#2A265F'
+											}}
+										/>
+										<span className={styles.progressText}>
+											{index + 1}/{question.length} Challenges
+										</span>
 									</div>
 									{statement && (
 										<div className={styles.syntaxContainer}>
