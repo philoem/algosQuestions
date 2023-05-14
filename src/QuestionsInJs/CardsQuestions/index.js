@@ -38,7 +38,7 @@ const CardsQuestions = () => {
 										<div className={styles.syntaxContainer}>
 											<h6>Enoncé: </h6>
 											<div className={styles.syntax}>
-												<SyntaxHighlighter language="javascript" style={dracula}>
+												<SyntaxHighlighter language='javascript' style={dracula}>
 													{statement}
 												</SyntaxHighlighter>
 											</div>
@@ -56,7 +56,7 @@ const CardsQuestions = () => {
 											</p>
 										</div>
 										{isVisibleFirst[id] && (
-											<SyntaxHighlighter language="javascript" style={dracula}>
+											<SyntaxHighlighter language='javascript' style={dracula}>
 												{result1}
 											</SyntaxHighlighter>
 										)}
@@ -75,7 +75,7 @@ const CardsQuestions = () => {
 											</div>
 										)}
 										{isVisibleSecond[id] && result2 && (
-											<SyntaxHighlighter language="javascript" style={dracula}>
+											<SyntaxHighlighter language='javascript' style={dracula}>
 												{result2}
 											</SyntaxHighlighter>
 										)}

@@ -3,7 +3,7 @@ import ScrollToTop from '../Components/ScrollToTop'
 import styles from './index.module.css'
 import CardsQuestions from './CardsQuestions'
 
-function QuestionsInJs() {
+const QuestionsInJs = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.containerBtnBack}>

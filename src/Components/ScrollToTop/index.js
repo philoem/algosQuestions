@@ -27,7 +27,7 @@ const ScrollToTop = () => {
 
 	return (
 		<>
-			<button onClick={scrollingToTop} className={styles.buttonToTop}>
+			<button type='button' onClick={scrollingToTop} className={styles.buttonToTop}>
 				{visible && <FaArrowAltCircleUp />}
 			</button>
 		</>
