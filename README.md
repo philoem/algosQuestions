@@ -2,7 +2,7 @@
 It's a Javascript algorithms training site.
 
 ## Overview
-![screenshot](/src/assets/Capture%20d%E2%80%99%C3%A9cran%20du%202023-05-09%2016-07-36.png)
+![screenshot](/src/assets/Capture%20d%E2%80%99%C3%A9cran%20du%202023-05-15%2014-01-49.png)
 
 
 ## How does it work ?
