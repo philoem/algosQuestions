@@ -1,89 +1,28 @@
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import question from '../../api/q&a.json'
-import useRevealSolution from '../hooks/useRevealSolution'
-import SwitchButton from '../../Components/SwitchButton'
 import styles from './index.module.css'
-import progressBar from '../../utils/progressBar'
+import Statement from '../components/Statement'
+import FirstResult from '../components/FirstResult'
+import SecondResult from '../components/SecondResult'
+import ProgressBar from '../components/ProgressBar'
+import Topic from '../components/Topic'
 
 const CardsQuestions = () => {
-	const { isVisibleFirst, isVisibleSecond, toggleButtonFirst, toggleButtonSecond } =
-		useRevealSolution()
 	const questionLength = question?.length
 	return (
 		<div>
 			{question?.map(({ id, topic, statement, result1, result2 }, index) => {
 				return (
-					<>
-						<div className={styles.coursesContainer} key={`question_${index}`}>
-							<div className={styles.course}>
-								<div className={styles.coursePreview}>
-									<h6>Question {index + 1}</h6>
-									<h4>{topic}</h4>
-								</div>
-								<div className={styles.courseInfo}>
-									<div className={styles.progressContainer}>
-										<div
-											className={styles.progress}
-											style={{
-												width: `${progressBar({ questionLength, index })}%`,
-												backgroundColor: '#2A265F'
-											}}
-										/>
-										<span className={styles.progressText}>
-											{index + 1}/{questionLength} Questions
-										</span>
-									</div>
-									{statement && (
-										<div className={styles.syntaxContainer}>
-											<h6>Enoncé: </h6>
-											<div className={styles.syntax}>
-												<SyntaxHighlighter language='javascript' style={dracula}>
-													{statement}
-												</SyntaxHighlighter>
-											</div>
-										</div>
-									)}
-									<div>
-										<div className={styles.firstSubContainer}>
-											<h6>1ère solution: </h6>
-											<SwitchButton
-												onClick={() => toggleButtonFirst(id)}
-												key={`swicthFirst_${id}`}
-											/>
-											<p className={styles.labelText}>
-												{isVisibleFirst[id] === true ? 'Hide' : 'Reveals'}
-											</p>
-										</div>
-										{isVisibleFirst[id] && (
-											<SyntaxHighlighter language='javascript' style={dracula}>
-												{result1}
-											</SyntaxHighlighter>
-										)}
-									</div>
-									<div>
-										{result2 && (
-											<div className={styles.secondSubContainer}>
-												<h6>2ème solution:</h6>
-												<SwitchButton
-													onClick={() => toggleButtonSecond(id)}
-													key={`swicthSecond_${id}`}
-												/>
-												<p className={styles.labelText}>
-													{isVisibleSecond[id] === true ? 'Hide' : 'Reveals'}
-												</p>
-											</div>
-										)}
-										{isVisibleSecond[id] && result2 && (
-											<SyntaxHighlighter language='javascript' style={dracula}>
-												{result2}
-											</SyntaxHighlighter>
-										)}
-									</div>
-								</div>
+					<div className={styles.coursesContainer} key={`question_${index}`}>
+						<div className={styles.course}>
+							<Topic topic={topic} index={index} />
+							<div className={styles.courseInfo}>
+								<ProgressBar questionLength={questionLength} index={index} />
+								<Statement statement={statement} />
+								<FirstResult result1={result1} id={id} />
+								<SecondResult result2={result2} id={id} />
 							</div>
 						</div>
-					</>
+					</div>
 				)
 			})}
 		</div>
