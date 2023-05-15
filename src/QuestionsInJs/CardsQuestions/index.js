@@ -31,7 +31,7 @@ const CardsQuestions = () => {
 											}}
 										/>
 										<span className={styles.progressText}>
-											{index + 1}/{questionLength} Challenges
+											{index + 1}/{questionLength} Questions
 										</span>
 									</div>
 									{statement && (
