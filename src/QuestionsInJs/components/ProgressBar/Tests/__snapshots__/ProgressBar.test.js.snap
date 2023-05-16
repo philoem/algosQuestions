@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressBar Default progress bar 1`] = `
+<div>
+  <div
+    class="progressContainer"
+  >
+    <div
+      class="progress"
+      role="progressBar"
+      style="width: 17%; background-color: rgb(42, 38, 95);"
+    />
+    <span
+      class="progressText"
+    >
+      1
+      /
+      6
+       Questions
+    </span>
+  </div>
+</div>
+`;
+
+exports[`ProgressBar Math round value 1`] = `
+<div>
+  <div
+    class="progressContainer"
+  >
+    <div
+      class="progress"
+      role="progressBar"
+      style="width: 67%; background-color: rgb(42, 38, 95);"
+    />
+    <span
+      class="progressText"
+    >
+      4
+      /
+      6
+       Questions
+    </span>
+  </div>
+</div>
+`;
