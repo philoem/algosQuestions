@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch Button clickable Switch button clicked for the first time 1`] = `
+<div>
+  <div
+    class="containerSwitchBtn"
+  >
+    <label
+      class="switch"
+    >
+      <input
+        aria-label="checkbox"
+        type="checkbox"
+      />
+      <span
+        class="slider"
+      />
+    </label>
+  </div>
+</div>
+`;
