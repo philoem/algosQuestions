@@ -9,6 +9,6 @@ Feature: ScrollToTop
 
     Scenario: ScrollToTop is display
       When User scroll to end of list
-      Then ScrollToTop callback should be called
-      And ScrollToTop's icon is display
+      Then ScrollToTop's icon is display 
+      And ScrollToTop's button is clicked
 
