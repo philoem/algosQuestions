@@ -12,12 +12,12 @@
   padding: 0.5rem; /* 8px */
   font-weight: bold;
   height: 40px;
-  border: 1px solid lightgrey;
+  border: 1px solid rgba(255, 255, 255, 0);
   border-radius: 8px;
   align-items: center;
 }
 
 .btnGoBack:hover {
-  background-color: #1d4ed8;
+  background-color: #2a265f;
   color: white;
 }
