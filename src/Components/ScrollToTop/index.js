@@ -5,7 +5,7 @@ import styles from './index.module.css'
 const ScrollToTop = () => {
 	const [visible, setVisible] = useState(false)
 
-	const toggleVisible = () => {
+	const toggleVisibility = () => {
 		const scrolled = document.documentElement.scrollTop
 		if (scrolled > 100) {
 			setVisible(true)
@@ -22,7 +22,10 @@ const ScrollToTop = () => {
 	}
 
 	useEffect(() => {
-		window.addEventListener('scroll', toggleVisible)
+		window.addEventListener('scroll', toggleVisibility)
+		return () => {
+			window.removeEventListener('scroll', toggleVisibility)
+		}
 	}, [])
 
 	return (
