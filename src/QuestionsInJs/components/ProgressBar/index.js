@@ -4,12 +4,13 @@ import styles from '../../CardsQuestions/index.module.css'
 import PropTypes from 'prop-types'
 
 const ProgressBar = ({ questionLength, index }) => {
+	const progress = progressBar({ questionLength, index })
 	return (
 		<div className={styles.progressContainer}>
 			<div
 				className={styles.progress}
 				style={{
-					width: `${progressBar({ questionLength, index })}%`,
+					width: `${progress}%`,
 					backgroundColor: '#2A265F'
 				}}
 				// eslint-disable-next-line jsx-a11y/aria-role
